@@ -1,0 +1,13 @@
+<p>add-customer works!</p>
+<form #customerForm="ngForm" (ngSubmit)="addCustomer(customerForm)">
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" class="form-control" ngModel required>
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" class="form-control" ngModel required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Customer</button>
+  </form>
+  <div *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</div>
